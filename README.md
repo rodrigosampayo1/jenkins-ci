@@ -18,3 +18,8 @@ Types of Jenkins Projects
 1. Freestyle -> simple, single tasks, e.g. run test
 2. Pipeline -> whole delivery cycle, e.g. test | build | package | deploy for a single branch
 3. Multibranch pipeline -> like pipeline for multi branh
+
+Set up multibranch pipeline using git
+- Credentials in Jenkins
+- Filter branches by name
+1. Create a new job or new item
