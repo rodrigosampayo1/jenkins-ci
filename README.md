@@ -23,3 +23,16 @@ Set up multibranch pipeline using git
 - Credentials in Jenkins
 - Filter branches by name
 1. Create a new job or new item
+2. Check BRANCH SOURCES:
+    - Project repositoy -> git repo
+    - creds
+    - behaviors -> Discover branches, filter by name (with regular expression) -> regular expression .* (everything)
+3. Check BUILD CONFIGURATION:
+    - mode: by Jenkinsfile -> default
+4. Add credentials -> it's a plugin to store and manage then centrally
+5. Crendentials scope: Global (jenkins, jobs, node, items, all child items) or System (Jenkins and node only) or Project scope.
+6. Credentials KInd: user and password, github app, ssh private key, etc.
+7. Add username, password and ID (how to reference on pipeline)
+8. Realize that on the new Project, credentials are showned. BUt system creds are not there, only globals or project credentials.
+9. On Project, COnfiguration, add pipeline creds.
+10. It will fails because it cant find a JenkinsFile
