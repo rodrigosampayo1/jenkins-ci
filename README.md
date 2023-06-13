@@ -51,4 +51,4 @@ Example:
     - Content type: a. application/json
                     b. application/x-www-from-urlencoded
     - Events: Select Pushes and PUll Requests
-    - Need a public URL for Jenkins Server, not use localhost:8080
+    - Need a public URL for Jenkins Server, not use localhost 8080
