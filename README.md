@@ -36,3 +36,18 @@ Set up multibranch pipeline using git
 8. Realize that on the new Project, credentials are showned. BUt system creds are not there, only globals or project credentials.
 9. On Project, COnfiguration, add pipeline creds.
 10. It will fails because it cant find a JenkinsFile
+
+How to trigger Jenkins build automatically
+- Push notifications, it means VCS, version control source, notifies Jenkins on a NEW COMMIT
+- Polling for changes, it means Jenkins polls in regular intervalls, is there a new change?
+
+1. Push Notifictions:
+Need to configure Jenkins and VCS, to they can communicate each other
+Install jenkins plugin depend of you VCS, configure Repository Server hostname and the Access Token or Credentials
+Example:
+    From github, go to Settings, go to WEBHOOK left pannel, ADD WEBHOOK.
+    - Payload URL: use your Jenkins Server and At the end of this URL add /github-webhook/
+    http://jenkinsserverrs.ddns.net:8080/github-webhook
+    - Content type: a. application/json
+                    b. application/x-www-from-urlencoded
+    - Events: Select Pushes and PUll Requests
